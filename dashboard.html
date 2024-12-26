@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dashboard</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/dashstyle.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/test.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <div class="weather-widget">
+          <div class="log" id="menuout">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+          </div>
+          <div id="weather-icon" class="weather-icon"></div>
+          <p id="weather-description" class="weather-description"></p>
+          <p id="temperature" class="temperature"></p>
+          <div class="wind" id="wind"></div>
+          <div class="location" id="loc"></div>
+          <div id="current-time" class="current-time"></div>
+        </div>
+        <hr />
+        <img src="img/logout (1).png" class="logout" alt="" />
+      </div>
+      <div id="content" class="content">
+        <div class="layer1">
+          <div class="history">
+            <div class="log" id="menu">
+              <div class="a"></div>
+              <div class="b"></div>
+              <div class="c"></div>
+            </div>
+            <span>week</span>
+            <span>month</span>
+          </div>
+          
+          <div class="infouser">
+            <img src="img/0_4.jpeg" alt="" />
+            <div class="user">unknown</div>
+          </div>
+        </div>
+        <div class="layer2">
+          <div class="card1 cards">
+            <div class="describtion">
+              <span class="name">tempreture</span>
+              <span class="degree">111</span>
+            </div>
+            <img src="img/thermometer.png" alt="" />
+          </div>
+          <div class="card2 cards">
+            <div class="describtion">
+              <span class="name">light</span>
+              <span class="degree">222</span>
+            </div>
+            <img src="img/sun.png" alt="" />
+          </div>
+          <div class="card3 cards">
+            <div class="describtion">
+              <span class="name">humidty</span>
+              <span class="degree">333</span>
+            </div>
+            <img src="img/weather.png" alt="" />
+          </div>
+          <div class="card4 cards">
+            <div class="describtion">
+              <span class="name">fan speed</span>
+              <span class="degree">444</span>
+            </div>
+            <img src="img/fan.png" alt="" />
+          </div>
+        </div>
+        <div class="layer3">
+          <div class="rotating-text">
+            <p>smart greenhouse is</p>
+            <p>
+              <span class="word alizarin">awesome.</span>
+              <span class="word wisteria">beautiful.</span>
+              <span class="word peter-river">creative.</span>
+              <span class="word emerald">fabulous.</span>
+              <span class="word sun-flower">interesting.</span>
+            </p>
+          </div>
+        </div>
+        <div class="layer4">
+          <div class="analysis1">
+            <div class="rate">
+              <div class="simple"></div>
+              <span class="text">rate of tempreture</span>
+            </div>
+            <canvas id="myChart-line"></canvas>
+          </div>
+          <div class="analysis2">
+            <div class="rate">
+              <div class="simple"></div>
+              <span class="text">rate of humidty</span>
+            </div>
+            <canvas id="myChart-pie"></canvas>
+          </div>
+        </div>
+        <div class="layer5">
+          <div class="future1">
+            <!-- <div class="text">smart greenhouse is linked</div> -->
+            <div class="feature">
+              <img src="img/coming-soon.gif" alt="" />
+              <img src="img/drone.gif" alt="" />
+              <img src="img/fire-alarm.gif" alt="" />
+              <img src="img/wind-turbine.gif" alt="" />
+            </div>
+          </div>
+          <div class="future2">
+            <div class="info">
+              <div class="descrip">Percentage of sick plants</div>
+              <div id="pers" class="pers"></div>
+            </div>
+            <div class="volume" id="volume"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/test.js"></script>
+    <script src="js/gragh.js"></script>
+    <script src="js/volume.js"></script>
+    <script src="js/apiWeather.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/apiarduinocloud.js"></script>
+  </body>
+</html>

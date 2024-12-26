@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background-image: linear-gradient(
+      rgba(65, 207, 22, 0.74),
+      rgba(240, 240, 240, 0.699)
+    ),
+    url(../img/img/bghead.png);
+    background-size: cover;
+    height: 100vh;
+}
+.header .nav{
+    display: flex;
+    justify-content: space-between;
+}
+.header .nav .some{
+    display: flex;
+    
+}

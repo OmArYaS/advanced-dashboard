@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: Cambria, Cochin;
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #111723;
+}
+.container {
+  display: flex;
+  width: 90%;
+  height: 85%;
+  background-color: aliceblue;
+  border-radius: 50px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  align-items: end;
+  background-color: #2b3648;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 15px;
+  position: relative;
+}
+.sidebar .weather-widget {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .weather-widget .weather-icon {
+  width: 100%;
+  padding: 10px;
+}
+
+.sidebar .weather-widget .weather-description {
+  font-size: 200%;
+  color: #b3c2d5;
+  /* margin-top: 30%; */
+  /* align-self: center; */
+}
+.sidebar .weather-widget .temperature {
+  font-size: 400%;
+  color: #b3c2d5;
+  /* margin-top: 30%; */
+
+  /* align-self: center; */
+}
+.sidebar .weather-widget sup {
+  font-size: 60%;
+}
+.sidebar .weather-widget .current-time {
+  margin-top: 10%;
+  color: #b3c2d5;
+}
+.sidebar hr {
+  width: 100%;
+  border-color: #b3c2d5;
+  margin-top: 10%;
+}
+.sidebar .logout {
+  width: 30%;
+  align-self: center;
+  /* margin-top: 30%; */
+  /* margin-left: 10px; */
+}
+.content {
+  width: 80%;
+  background-color: #212936;
+  display: grid;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  /* grid-template-columns: repeat(5,20%); */
+  grid-template-rows: 10% 20% 5% 40% 15%;
+  grid-template-columns: 100%;
+  grid-template-areas: "layer1" "layer2" "layer3" "layer4" "layer5";
+  padding: 20px;
+  row-gap: 15px;
+}
+
+/* layer1 is start */
+
+.content .layer1 {
+  display: flex;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+.content .layer1 .history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 20%; */
+}
+.content .layer1 .history span {
+  margin: 5px;
+  padding: 5px;
+  color: #becde0;
+}
+.content .layer1 .history span {
+  margin: 5px;
+  padding: 5px;
+  color: #becde0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.content .layer1 .history span::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 5%;
+  bottom: 0px;
+  background-color: #6b7483;
+  transition: 0.3s;
+}
+.content .layer1 .history span:hover::after {
+  width: 100%;
+  background-color: #6b7483;
+}
+
+.content .layer1 .infouser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 175px;
+  overflow: hidden;
+}
+.content .layer1 .infouser img {
+  width: 40%;
+  border-radius: 20%;
+  padding: 5px;
+}
+.content .layer1 .infouser .user {
+  width: 60%;
+  padding: 5px;
+  color: #b3c2d5;
+}
+
+/* layer1 is end */
+
+/* layer2 is start */
+
+.content .layer2 {
+  display: flex;
+  justify-content: space-between;
+}
+.content .layer2 .cards {
+  display: flex;
+  justify-content: space-between;
+  width: 22%;
+  background-color: #2b3648;
+  border-radius: 15px;
+  padding: 1.5%;
+}
+.content .layer2 .cards img {
+  width: 50px;
+  height: 50px;
+}
+.content .layer2 .cards .describtion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.content .layer2 .cards .describtion .name {
+  color: #828fa2;
+}
+.content .layer2 .cards .describtion .degree {
+  color: #bccbde;
+  font-size: 200%;
+}
+
+.content .layer3 .text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #b3c2d5;
+  font-size: 100%;
+}
+.content .layer4 {
+  display: flex;
+  justify-content: space-between;
+}
+.content .layer4 .analysis1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 60%;
+  border-radius: 15px;
+
+  background-color: #2b3648;
+  padding: 1.5%;
+}
+.content .layer4 .analysis1 .rate {
+  display: flex;
+  margin-left: 2%;
+}
+.content .layer4 .analysis1 .rate .simple {
+  width: 4px;
+  height: 17px;
+  border-radius: 35px;
+  background-color: #0ddbc6;
+  align-self: center;
+}
+.content .layer4 .analysis1 .rate .text {
+  margin-left: 2%;
+  color: #8f9ebb;
+}
+.content .layer4 .analysis1 canvas {
+  width: 100% !important;
+  height: 90% !important;
+}
+.content .layer4 .analysis2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 35%;
+  border-radius: 15px;
+  background-color: #2b3648;
+  padding: 1.5%;
+}
+.content .layer4 .analysis2 canvas {
+  width: 70% !important;
+  height: 70% !important;
+  align-self: center;
+}
+.content .layer4 .analysis2 .rate {
+  display: flex;
+  margin-left: 2%;
+}
+.content .layer4 .analysis2 .rate .simple {
+  width: 4px;
+  height: 17px;
+  border-radius: 35px;
+  background-color: #0ddbc6;
+  align-self: center;
+}
+.content .layer4 .analysis2 .rate .text {
+  margin-left: 2%;
+  color: #8f9ebb;
+}
+
+.content .layer5 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .layer5 .future1 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #2b3648;
+  padding: 1.5%;
+  border-radius: 15px;
+}
+.content .layer5 .future1 .text {
+  font-size: 150%;
+}
+.content .layer5 .future1 .feature {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.content .layer5 .future1 .feature img {
+  width: 20%;
+  height: 100%;
+  border-radius: 15px;
+  filter: brightness(50%) contrast(120%);
+}
+.content .layer5 .future2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35%;
+  background-color: #2b3648;
+  padding: 1.5%;
+  border-radius: 15px;
+}
+.content .layer5 .future2 .volume {
+  display: flex;
+  justify-content: space-between;
+}
+.content .layer5 .future2 .info {
+  display: flex;
+  justify-content: space-between;
+}
+.content .layer5 .future2 .info .descrip {
+  width: 50%;
+  color: #8191aa;
+}
+.content .layer5 .future2 .info .pers {
+  color: #becde0;
+  font-size: 200%;
+}
+
+.content .layer5 .future2 .volume div {
+  background-color: #0ddbc6;
+  width: 5px;
+  height: 20px;
+}
