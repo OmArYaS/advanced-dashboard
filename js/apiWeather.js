@@ -62,7 +62,7 @@ const weatherImages = {
 
 // Function to fetch weather data based on coordinates
 function fetchWeatherData(lat, lon) {
-  const apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
   fetch(apiUrl)
     .then((response) => {
